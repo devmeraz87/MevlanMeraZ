@@ -1,0 +1,77 @@
+._testimonial_slider_container {
+    position: relative;
+
+    ._testimonial_slider {
+
+        ._testimonial_slide {
+            @apply flex items-start gap-[180px];
+
+            ._testimonial_slide_img {
+
+                img {
+                    min-width: 420px;
+                    min-height: 540px;
+                    object-fit: cover;
+                    cursor: none;
+                }
+            }
+
+            ._testimonial_context {
+
+                ._quotes {
+                    @apply flex items-center;
+                    font-size: 80px;
+                    margin-bottom: 0.5rem;
+                    color: var(--secondary-color);
+                }
+
+                ._testimonial_text {
+                    @apply flex flex-col items-start mb-12;
+                    font-size: 36px;
+                    line-height: 46px;
+                    font-weight: 500;
+                    color: var(--global-section-heading-text-color);
+                }
+
+                ._testimonial_name_and_designation {
+
+                    ._name {
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: var(--global-section-heading-text-color);
+                        margin-bottom: 0.4rem;
+                    }
+
+                    ._designation {
+                        color: var(--global-sub-heading-text-color);
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+._testimonial_pagination_button_container {
+    @apply absolute flex gap-4 cursor-pointer;
+    left: 602px;
+    bottom: 60px;
+    z-index: 1;
+
+    .swiper-pagination-bullet {
+        display: inline-block;
+        vertical-align: middle;
+        width: 40px;
+        height: 8px;
+        transition: 0.3s;
+        background-color: var(--secondary-color);
+
+        &.swiper-pagination-bullet-active {
+            background-color: var(--primary-color);
+            width: 50px;
+        }
+    } 
+}

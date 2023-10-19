@@ -1,0 +1,100 @@
+._contact {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: var(--contact-bg-color);
+
+    ._contact_context {
+
+        ._contact_context_content {
+            @apply flex items-start justify-between;
+
+
+            ._contact_context_content_left {
+                @apply flex flex-col items-start gap-4;
+
+                ._contact_left_sub_heading {
+                    @apply flex items-center;
+                    gap: 10px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: var(--global-sub-heading-text-color);
+
+                    ._sub_heading_line {
+                        height: 2px;
+                        width: 12px;
+                        background-color: var(--global-sub-heading-text-color);
+                    }
+                }
+
+                ._contact_left_heading {
+                    @apply flex flex-col;
+                    font-size: 40px;
+                    line-height: 48px;
+                    font-weight: 600;
+                    color: var(--global-section-heading-text-color);
+                }
+
+                ._contact_left_lead {
+
+                    p {
+                        @apply flex flex-col;
+                        color: var(--global-section-lead-color);
+                        font-size: 18px;
+                    }
+                }
+
+                ._contact_link {
+                    margin-top: 6rem
+                }
+            }
+
+            ._contact_context_content_right {
+                @apply flex flex-col items-start gap-4;
+
+                ._contact_right_heading {
+                    @apply flex flex-col;
+                    font-size: 40px;
+                    line-height: 48px;
+                    font-weight: 600;
+                    color: var(--global-section-heading-text-color);
+                }
+
+                ._contact_right_lead {
+
+                    p {
+                        @apply flex flex-col; 
+                        color: var(--global-section-lead-color);
+                        font-size: 18px
+                    }
+                }
+
+                ._experiance_year_and_clients {
+                    @apply flex items-center;
+                    gap: 50px;
+                    margin-top: 2rem;
+
+                    ._ex_and_clie {
+                        @apply flex items-end gap-3;
+
+                        ._number {
+                            font-size: 85px;
+                            line-height: 60px;
+                            font-weight: 600;
+                            color: var(--primary-color)
+                        }
+
+                        ._text {
+                            @apply flex flex-col items-start;
+                            line-height: 1;
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #fff;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}

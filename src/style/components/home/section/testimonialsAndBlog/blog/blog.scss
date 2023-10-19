@@ -1,0 +1,106 @@
+._home_blog {
+        
+
+    ._home_blog_context {
+        @apply flex items-start justify-between;
+
+
+        ._home_blog_context_left {
+
+            ._home_blog_sub_heading {
+                @apply flex items-center gap-3;
+                color: var(--global-sub-heading-text-color);
+                margin-bottom: 0.75rem;
+
+
+                ._home_blog_sub_heading_line {
+                    width: 12px;
+                    height: 2px;
+                    background-color: var(--global-sub-heading-text-color);
+                }
+            }
+
+            ._home_blog_heading {
+                @apply flex flex-col;
+                font-size: 40px;
+                line-height: 48px;
+                font-weight: 600;
+                color: var(--global-section-heading-text-color);
+            }
+        }
+
+        ._home_blog_context_right {
+            
+            ._home_blog_lists {
+
+                ._home_blog_list_item {
+                    position: relative;
+                    padding: 1.5rem 0;
+                    &:not(:last-child) {
+                        border-bottom: 1px solid #3b4057;
+                    }
+
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        bottom: 0;
+                        left: 0;
+                        transform: scaleY(0);
+                        transform-origin: bottom;
+                        transition: transform .3s;
+                        background-color: rgba(0, 0, 0, 0.253)
+
+                    }
+
+
+                    a {
+                        @apply grid;
+                        grid-template-columns: 0.5fr 0.9fr 0.2fr;
+                        color: var(--global-section-heading-text-color);
+
+                        ._blog_publish_date_and_name {
+                            font-size: 12px;
+                            color: #999;
+                            @apply flex items-center gap-2;
+
+                            ._dot {
+                                height: 2px;
+                                width: 2px;
+                                background-color: #999;
+                                border-radius: 50%;
+                            }
+                        }
+
+                        ._right_arrow {
+                            @apply flex items-center justify-end;
+                            color: var(--primary-color);
+                            font-size: 18px;
+                        }
+                    }
+
+                    
+                    &:hover {
+
+                        &::after {
+                          transform: scaleY(1);
+                          transform-origin: top;
+                        }
+
+                        a {
+                            position: relative;
+                            z-index: 1;
+                            color: #fff;
+
+                            ._blog_publish_date_and_name {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
